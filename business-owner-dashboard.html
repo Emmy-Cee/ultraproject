@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Owner Dashboard - MarketPlace</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MarketPlace</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><span class="nav-user">👤 John Doe</span></li>
+                <li><a href="index.html" class="btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Dashboard</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-tab="overview">📊 Overview</a>
+                <a href="#" class="nav-item" data-tab="business-requests">📋 Business Requests</a>
+                <a href="#" class="nav-item" data-tab="my-businesses">🏪 My Businesses</a>
+                <a href="#" class="nav-item" data-tab="products">📦 Products</a>
+                <a href="#" class="nav-item" data-tab="settings">⚙️ Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Overview Tab -->
+            <section id="overview" class="tab-content active">
+                <h1>Welcome Back, John!</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Active Businesses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Total Products</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1</div>
+                        <div class="stat-label">Pending Requests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">$2,450</div>
+                        <div class="stat-label">This Month</div>
+                    </div>
+                </div>
+
+                <h2>Recent Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">✅</span>
+                        <div class="activity-details">
+                            <h4>Business Approved</h4>
+                            <p>Tech Store has been approved as a seller</p>
+                            <small>2 days ago</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">📦</span>
+                        <div class="activity-details">
+                            <h4>New Product Added</h4>
+                            <p>Wireless Headphones has been added to Tech Store</p>
+                            <small>1 week ago</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Requests Tab -->
+            <section id="business-requests" class="tab-content">
+                <h1>Business Registration Requests</h1>
+                <button class="btn btn-primary btn-add-business">+ Create New Business Request</button>
+
+                <div class="requests-list">
+                    <div class="request-card pending">
+                        <div class="request-header">
+                            <h3>Fashion Hub</h3>
+                            <span class="status-badge pending">Pending Approval</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>Category:</strong> Clothing & Fashion</p>
+                            <p><strong>Address:</strong> 789 Style Blvd, City</p>
+                            <p><strong>Phone:</strong> +1 (555) 987-6543</p>
+                            <p><strong>Submitted:</strong> 5 days ago</p>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-secondary btn-small">Edit</button>
+                            <button class="btn btn-warning btn-small">Cancel Request</button>
+                        </div>
+                    </div>
+
+                    <div class="request-card approved">
+                        <div class="request-header">
+                            <h3>Tech Store</h3>
+                            <span class="status-badge approved">Approved</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>Category:</strong> Electronics</p>
+                            <p><strong>Address:</strong> 123 Tech Street, City</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Approved:</strong> 2 weeks ago</p>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-primary btn-small">View Shop</button>
+                            <button class="btn btn-secondary btn-small">Edit Info</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Businesses Tab -->
+            <section id="my-businesses" class="tab-content">
+                <h1>My Businesses</h1>
+                <div class="businesses-grid-dashboard">
+                    <div class="business-dashboard-card">
+                        <div class="business-badge approved">Approved</div>
+                        <h3>Tech Store</h3>
+                        <p class="category">Electronics & Gadgets</p>
+                        <p class="rating">⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p class="products">45 Products</p>
+                        <div class="business-actions">
+                            <button class="btn btn-primary btn-small">View</button>
+                            <button class="btn btn-secondary btn-small">Edit</button>
+                            <button class="btn btn-danger btn-small">Delete</button>
+                        </div>
+                    </div>
+
+                    <div class="business-dashboard-card">
+                        <div class="business-badge pending">Pending</div>
+                        <h3>Fashion Hub</h3>
+                        <p class="category">Clothing & Fashion</p>
+                        <p class="rating">Not yet rated</p>
+                        <p class="products">0 Products</p>
+                        <div class="business-actions">
+                            <button class="btn btn-secondary btn-small">Edit</button>
+                            <button class="btn btn-danger btn-small">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Tab -->
+            <section id="products" class="tab-content">
+                <h1>Manage Products</h1>
+                <button class="btn btn-primary btn-add-product">+ Add New Product</button>
+
+                <div class="products-table-container">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Business</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wireless Headphones</td>
+                                <td>Tech Store</td>
+                                <td>$89.99</td>
+                                <td>15</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-icon edit">✏️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>USB-C Cable</td>
+                                <td>Tech Store</td>
+                                <td>$12.99</td>
+                                <td>45</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-icon edit">✏️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phone Stand</td>
+                                <td>Tech Store</td>
+                                <td>$19.99</td>
+                                <td>30</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-icon edit">✏️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="settings" class="tab-content">
+                <h1>Account Settings</h1>
+                <div class="settings-container">
+                    <h2>Profile Information</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" value="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" value="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" value="123 Main St, City">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+
+                    <h2>Change Password</h2>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <input type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Add Business Request -->
+    <div id="addBusinessModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Business Registration Request</h2>
+            <form class="form">
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select required>
+                        <option>Select a category</option>
+                        <option>Electronics</option>
+                        <option>Clothing</option>
+                        <option>Food & Beverages</option>
+                        <option>Home & Garden</option>
+                        <option>Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Website (Optional)</label>
+                    <input type="url">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

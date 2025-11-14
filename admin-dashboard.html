@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MarketPlace</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MarketPlace</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><span class="nav-user">👤 Admin User</span></li>
+                <li><a href="index.html" class="btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-tab="overview">📊 Overview</a>
+                <a href="#" class="nav-item" data-tab="business-requests">📋 Business Requests</a>
+                <a href="#" class="nav-item" data-tab="businesses">🏪 All Businesses</a>
+                <a href="#" class="nav-item" data-tab="users">👥 Users</a>
+                <a href="#" class="nav-item" data-tab="reports">📈 Reports</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <!-- Overview Tab -->
+            <section id="overview" class="tab-content active">
+                <h1>Admin Dashboard</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">152</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Approved Businesses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Pending Requests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">892</div>
+                        <div class="stat-label">Total Products</div>
+                    </div>
+                </div>
+
+                <div class="admin-charts">
+                    <div class="chart-container">
+                        <h2>Recent Requests</h2>
+                        <div class="recent-requests">
+                            <div class="request-item pending">
+                                <h4>Tech Store 2</h4>
+                                <p>Electronics - Submitted 1 hour ago</p>
+                                <button class="btn btn-small btn-primary">Review</button>
+                            </div>
+                            <div class="request-item pending">
+                                <h4>Organic Foods Co</h4>
+                                <p>Food & Beverages - Submitted 3 hours ago</p>
+                                <button class="btn btn-small btn-primary">Review</button>
+                            </div>
+                            <div class="request-item pending">
+                                <h4>Style & Comfort</h4>
+                                <p>Clothing - Submitted 1 day ago</p>
+                                <button class="btn btn-small btn-primary">Review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Business Requests Tab -->
+            <section id="business-requests" class="tab-content">
+                <h1>Business Registration Requests</h1>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All (3)</button>
+                    <button class="filter-btn" data-filter="pending">Pending (2)</button>
+                    <button class="filter-btn" data-filter="approved">Approved (1)</button>
+                    <button class="filter-btn" data-filter="rejected">Rejected (0)</button>
+                </div>
+
+                <div class="requests-list">
+                    <div class="request-card pending">
+                        <div class="request-header">
+                            <div class="request-info">
+                                <h3>Tech Store 2</h3>
+                                <p class="owner">Owner: Jane Smith | ID: 12345</p>
+                            </div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>Category:</strong> Electronics & Gadgets</p>
+                            <p><strong>Address:</strong> 456 Tech Avenue, City</p>
+                            <p><strong>Phone:</strong> +1 (555) 456-7890</p>
+                            <p><strong>Website:</strong> www.techstore2.com</p>
+                            <p><strong>Submitted:</strong> 1 hour ago</p>
+                        </div>
+                        <div class="admin-notes">
+                            <textarea placeholder="Add admin notes..." rows="3"></textarea>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-success btn-small">✓ Approve</button>
+                            <button class="btn btn-danger btn-small">✗ Reject</button>
+                            <button class="btn btn-secondary btn-small">View Documents</button>
+                        </div>
+                    </div>
+
+                    <div class="request-card pending">
+                        <div class="request-header">
+                            <div class="request-info">
+                                <h3>Organic Foods Co</h3>
+                                <p class="owner">Owner: Mike Johnson | ID: 12346</p>
+                            </div>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>Category:</strong> Food & Beverages</p>
+                            <p><strong>Address:</strong> 789 Market Street, City</p>
+                            <p><strong>Phone:</strong> +1 (555) 789-0123</p>
+                            <p><strong>Website:</strong> www.organicfoods.com</p>
+                            <p><strong>Submitted:</strong> 3 hours ago</p>
+                        </div>
+                        <div class="admin-notes">
+                            <textarea placeholder="Add admin notes..." rows="3"></textarea>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-success btn-small">✓ Approve</button>
+                            <button class="btn btn-danger btn-small">✗ Reject</button>
+                            <button class="btn btn-secondary btn-small">View Documents</button>
+                        </div>
+                    </div>
+
+                    <div class="request-card approved">
+                        <div class="request-header">
+                            <div class="request-info">
+                                <h3>Tech Store</h3>
+                                <p class="owner">Owner: John Doe | ID: 12344</p>
+                            </div>
+                            <span class="status-badge approved">Approved</span>
+                        </div>
+                        <div class="request-details">
+                            <p><strong>Category:</strong> Electronics & Gadgets</p>
+                            <p><strong>Address:</strong> 123 Tech Street, City</p>
+                            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                            <p><strong>Approved By:</strong> Admin User</p>
+                            <p><strong>Approval Date:</strong> 2 weeks ago</p>
+                        </div>
+                        <div class="admin-notes" style="display:none;">
+                            <textarea placeholder="Add admin notes..." rows="3"></textarea>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-secondary btn-small">View Business</button>
+                            <button class="btn btn-danger btn-small">Suspend</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Businesses Tab -->
+            <section id="businesses" class="tab-content">
+                <h1>All Businesses</h1>
+                <div class="businesses-admin-grid">
+                    <div class="business-admin-card">
+                        <div class="business-header-admin">
+                            <h3>Tech Store</h3>
+                            <span class="status-badge approved">Approved</span>
+                        </div>
+                        <p><strong>Owner:</strong> John Doe</p>
+                        <p><strong>Category:</strong> Electronics</p>
+                        <p><strong>Products:</strong> 45</p>
+                        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p><strong>Registered:</strong> 2 weeks ago</p>
+                        <div class="admin-card-actions">
+                            <button class="btn btn-primary btn-small">View Details</button>
+                            <button class="btn btn-danger btn-small">Delete Business</button>
+                            <button class="btn btn-warning btn-small">Suspend</button>
+                        </div>
+                    </div>
+
+                    <div class="business-admin-card">
+                        <div class="business-header-admin">
+                            <h3>Fashion Hub</h3>
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                        <p><strong>Owner:</strong> Sarah Williams</p>
+                        <p><strong>Category:</strong> Clothing</p>
+                        <p><strong>Products:</strong> 0</p>
+                        <p><strong>Rating:</strong> Not yet rated</p>
+                        <p><strong>Registered:</strong> 5 days ago</p>
+                        <div class="admin-card-actions">
+                            <button class="btn btn-primary btn-small">View Details</button>
+                            <button class="btn btn-danger btn-small">Delete Business</button>
+                        </div>
+                    </div>
+
+                    <div class="business-admin-card">
+                        <div class="business-header-admin">
+                            <h3>Fresh Foods Market</h3>
+                            <span class="status-badge approved">Approved</span>
+                        </div>
+                        <p><strong>Owner:</strong> Mike Johnson</p>
+                        <p><strong>Category:</strong> Food & Beverages</p>
+                        <p><strong>Products:</strong> 28</p>
+                        <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.6)</p>
+                        <p><strong>Registered:</strong> 3 weeks ago</p>
+                        <div class="admin-card-actions">
+                            <button class="btn btn-primary btn-small">View Details</button>
+                            <button class="btn btn-danger btn-small">Delete Business</button>
+                            <button class="btn btn-warning btn-small">Suspend</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Users Tab -->
+            <section id="users" class="tab-content">
+                <h1>Manage Users</h1>
+                <div class="users-table-container">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Registered</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@marketplace.org</td>
+                                <td>Business Owner</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>2 weeks ago</td>
+                                <td>
+                                    <button class="btn-icon">👁️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@marketplace.org</td>
+                                <td>Business Owner</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>1 week ago</td>
+                                <td>
+                                    <button class="btn-icon">👁️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Williams</td>
+                                <td>sarah@marketplace.org</td>
+                                <td>Business Owner</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>5 days ago</td>
+                                <td>
+                                    <button class="btn-icon">👁️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mike Johnson</td>
+                                <td>mike@marketplace.org</td>
+                                <td>Business Owner</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>3 weeks ago</td>
+                                <td>
+                                    <button class="btn-icon">👁️</button>
+                                    <button class="btn-icon delete">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Reports Tab -->
+            <section id="reports" class="tab-content">
+                <h1>Reports & Analytics</h1>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>📊 Sales Report</h3>
+                        <p>Total Revenue: <strong>$45,230</strong></p>
+                        <p>This Month: <strong>$12,450</strong></p>
+                        <button class="btn btn-secondary btn-small">Download</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>👥 User Report</h3>
+                        <p>Total Users: <strong>152</strong></p>
+                        <p>New This Month: <strong>24</strong></p>
+                        <button class="btn btn-secondary btn-small">Download</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>🏪 Business Report</h3>
+                        <p>Approved: <strong>48</strong></p>
+                        <p>Pending: <strong>5</strong></p>
+                        <button class="btn btn-secondary btn-small">Download</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>📦 Inventory Report</h3>
+                        <p>Total Products: <strong>892</strong></p>
+                        <p>Low Stock: <strong>12</strong></p>
+                        <button class="btn btn-secondary btn-small">Download</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
