@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles & Comfort Reviews - Fashion Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MarketPlace</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="review-container">
+            <!-- Header -->
+            <div class="review-header">
+                <h1>Fashion Hub - Styles & Comfort Reviews</h1>
+                <p>Discover what customers think about our fashion collection's style and comfort</p>
+            </div>
+
+            <!-- Rating Summary -->
+            <div class="rating-summary">
+                <div class="rating-category">
+                    <h3>Style & Design</h3>
+                    <div class="rating-score">4.7</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="rating-count">Based on 156 reviews</div>
+                </div>
+                <div class="rating-category">
+                    <h3>Comfort & Fit</h3>
+                    <div class="rating-score">4.6</div>
+                    <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="rating-count">Based on 156 reviews</div>
+                </div>
+                <div class="rating-category">
+                    <h3>Quality & Durability</h3>
+                    <div class="rating-score">4.5</div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
+                    <div class="rating-count">Based on 156 reviews</div>
+                </div>
+                <div class="rating-category">
+                    <h3>Value for Money</h3>
+                    <div class="rating-score">4.4</div>
+                    <div class="rating-stars">⭐⭐⭐⭐</div>
+                    <div class="rating-count">Based on 156 reviews</div>
+                </div>
+            </div>
+
+            <!-- Size Guide Comparison -->
+            <div class="comparison-section">
+                <div class="comparison-header">📏 Size Guide & Fit Information</div>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="item-label">XS Size</div>
+                        <div class="item-value">Best for: Petite frames<br>Runs: True to size<br>Fabric: Stretchy</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="item-label">S-M Size</div>
+                        <div class="item-value">Best for: Average frames<br>Runs: Slightly loose<br>Fabric: Standard</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="item-label">L-XL Size</div>
+                        <div class="item-value">Best for: Larger frames<br>Runs: True to size<br>Fabric: Premium blend</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="item-label">Materials</div>
+                        <div class="item-value">Cotton: 60%<br>Polyester: 35%<br>Spandex: 5%</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="item-label">Care Instructions</div>
+                        <div class="item-value">Wash: Cold water<br>Dry: Tumble low<br>Iron: Low heat</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="item-label">Warranty</div>
+                        <div class="item-value">Defects: 1 year<br>Color fade: 6 months<br>Stitching: 2 years</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Form -->
+            <div class="review-form-section">
+                <h2 style="margin-bottom: 25px;">Share Your Style & Comfort Experience</h2>
+                <form id="reviewForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="text" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="rating-group">
+                            <div class="rating-label">Style & Design Rating</div>
+                            <div class="rating-options" id="styleRating">
+                                <div class="rating-option" data-value="1">1★</div>
+                                <div class="rating-option" data-value="2">2★</div>
+                                <div class="rating-option" data-value="3">3★</div>
+                                <div class="rating-option" data-value="4">4★</div>
+                                <div class="rating-option" data-value="5">5★</div>
+                            </div>
+                            <input type="hidden" name="styleRating" id="styleRatingValue" value="0">
+                        </div>
+                        <div class="rating-group">
+                            <div class="rating-label">Comfort & Fit Rating</div>
+                            <div class="rating-options" id="comfortRating">
+                                <div class="rating-option" data-value="1">1★</div>
+                                <div class="rating-option" data-value="2">2★</div>
+                                <div class="rating-option" data-value="3">3★</div>
+                                <div class="rating-option" data-value="4">4★</div>
+                                <div class="rating-option" data-value="5">5★</div>
+                            </div>
+                            <input type="hidden" name="comfortRating" id="comfortRatingValue" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Review Title</label>
+                        <input type="text" name="title" placeholder="e.g., 'Perfect fit and looks amazing'" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea name="review" placeholder="Tell us about the style and comfort of your Fashion Hub purchase..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+
+            <!-- Customer Reviews -->
+            <div class="reviews-list">
+                <h2 style="margin-bottom: 20px;">What Customers Are Saying</h2>
+
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-header-item">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sophie Anderson</div>
+                            <div class="review-meta">
+                                Purchased: Women's Premium Denim
+                                <span style="margin-left: 15px; color: #999;">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Style:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Comfort:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fit:</span>
+                            <span class="detail-value">True to size</span>
+                        </div>
+                    </div>
+                    <div class="review-title">These jeans are perfection!</div>
+                    <div class="review-text">The fit is incredible – not too tight, not too loose. The wash is exactly what I wanted, and they look professional but casual. Wore them all day and felt completely comfortable. The quality is outstanding for the price!</div>
+                    <div class="review-footer">
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                        <a href="#">Helpful (28)</a>
+                        <a href="#">Not Helpful (1)</a>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-header-item">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Emma Wilson</div>
+                            <div class="review-meta">
+                                Purchased: Classic White Button-Up Shirt
+                                <span style="margin-left: 15px; color: #999;">5 days ago</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Style:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Comfort:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fit:</span>
+                            <span class="detail-value">Slightly loose</span>
+                        </div>
+                    </div>
+                    <div class="review-title">Wardrobe essential - highly recommend!</div>
+                    <div class="review-text">This white button-up is exactly what I was looking for. The fabric is premium quality cotton blend, very breathable and soft. I can wear it to the office or casually. Washes beautifully and holds its shape. Ordered in two colors!</div>
+                    <div class="review-footer">
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                        <a href="#">Helpful (32)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-header-item">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Jessica Martinez</div>
+                            <div class="review-meta">
+                                Purchased: Leather Crossbody Bag
+                                <span style="margin-left: 15px; color: #999;">1 week ago</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Style:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Comfort:</span>
+                            <span class="detail-value">4/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fit:</span>
+                            <span class="detail-value">Perfect</span>
+                        </div>
+                    </div>
+                    <div class="review-title">Beautiful bag, strap could be softer</div>
+                    <div class="review-text">Love the sleek design and the fact that I can fit everything I need. The leather quality is excellent and it looks premium. The only downside is the strap is a bit stiff initially, but it's softening with use. Great value overall!</div>
+                    <div class="review-footer">
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                        <a href="#">Helpful (19)</a>
+                        <a href="#">Not Helpful (2)</a>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-item">
+                    <div class="review-header-item">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Rachel Thompson</div>
+                            <div class="review-meta">
+                                Purchased: Casual Sneakers
+                                <span style="margin-left: 15px; color: #999;">10 days ago</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Style:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Comfort:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fit:</span>
+                            <span class="detail-value">True to size</span>
+                        </div>
+                    </div>
+                    <div class="review-title">Super comfy and cute - wearing every day!</div>
+                    <div class="review-text">These sneakers are my new favorite. They're trendy, super comfortable for all-day wear, and match everything in my closet. The cushioning is excellent and my feet don't hurt at the end of the day. Definitely worth the investment!</div>
+                    <div class="review-footer">
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                        <a href="#">Helpful (45)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-item">
+                    <div class="review-header-item">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Michelle Lee</div>
+                            <div class="review-meta">
+                                Purchased: Premium Denim & White Shirt Combo
+                                <span style="margin-left: 15px; color: #999;">2 weeks ago</span>
+                            </div>
+                        </div>
+                        <div class="review-rating-stars">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Style:</span>
+                            <span class="detail-value">5/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Comfort:</span>
+                            <span class="detail-value">4/5</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Fit:</span>
+                            <span class="detail-value">True to size</span>
+                        </div>
+                    </div>
+                    <div class="review-title">Great pieces for a versatile wardrobe</div>
+                    <div class="review-text">Bought several items and they're all excellent quality. The styling is on-point and very current. The fit is true to size. My only note is that after a few washes, some items had minor color fading, but that's expected with quality fabrics.</div>
+                    <div class="review-footer">
+                        <span class="verified-badge">✓ Verified Purchase</span>
+                        <a href="#">Helpful (24)</a>
+                        <a href="#">Not Helpful (3)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MarketPlace</h4>
+                <p>Your trusted online marketplace for quality products and verified businesses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="fashionhub-detail.html">Fashion Hub</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MarketPlace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Rating selection for Style & Design
+        const styleOptions = document.querySelectorAll('#styleRating .rating-option');
+        const styleRatingValue = document.getElementById('styleRatingValue');
+
+        styleOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                styleOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                styleRatingValue.value = this.getAttribute('data-value');
+            });
+        });
+
+        // Rating selection for Comfort & Fit
+        const comfortOptions = document.querySelectorAll('#comfortRating .rating-option');
+        const comfortRatingValue = document.getElementById('comfortRatingValue');
+
+        comfortOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                comfortOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                comfortRatingValue.value = this.getAttribute('data-value');
+            });
+        });
+
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const styleRating = document.getElementById('styleRatingValue').value;
+            const comfortRating = document.getElementById('comfortRatingValue').value;
+            
+            if (styleRating === '0' || comfortRating === '0') {
+                alert('Please rate both Style & Design and Comfort & Fit');
+                return;
+            }
+
+            alert('Thank you for your review! It will be displayed after moderation.');
+            this.reset();
+            document.getElementById('styleRatingValue').value = '0';
+            document.getElementById('comfortRatingValue').value = '0';
+            styleOptions.forEach(opt => opt.classList.remove('selected'));
+            comfortOptions.forEach(opt => opt.classList.remove('selected'));
+        });
+    </script>
+</body>
+</html>

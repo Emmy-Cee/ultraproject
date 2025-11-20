@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Foods Co Reviews - MarketPlace</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MarketPlace</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reviews-container">
+            <!-- Reviews Header -->
+            <div class="reviews-header">
+                <h1>Organic Foods Co Reviews</h1>
+                <p style="color: #666; margin-top: 10px;">See what our customers think about our organic products</p>
+
+                <!-- Overall Rating Summary -->
+                <div class="overall-rating">
+                    <div class="rating-score">4.9</div>
+                    <div class="rating-details">
+                        <div style="margin-bottom: 10px;">
+                            <span style="color: #28a745; font-size: 18px;">⭐⭐⭐⭐⭐</span>
+                            <span style="color: #666; font-size: 14px; margin-left: 10px;">Based on 187 reviews</span>
+                        </div>
+                        
+                        <div class="rating-bar">
+                            <span>5★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 72%;"></div></div>
+                            <span style="color: #666;">135</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 20%;"></div></div>
+                            <span style="color: #666;">37</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 5%;"></div></div>
+                            <span style="color: #666;">9</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 2%;"></div></div>
+                            <span style="color: #666;">4</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                            <span style="color: #666;">2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Submission Form -->
+            <div class="review-form-section">
+                <h2 style="margin-bottom: 20px;">Leave a Review</h2>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="text" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="star-rating" id="starRating">
+                            <span data-rating="1">★</span>
+                            <span data-rating="2">★</span>
+                            <span data-rating="3">★</span>
+                            <span data-rating="4">★</span>
+                            <span data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" name="rating" id="ratingValue" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Review Title</label>
+                        <input type="text" name="title" placeholder="Summarize your experience in a few words" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea name="review" placeholder="Share your experience with Organic Foods Co..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-list">
+                <h2 style="margin-bottom: 20px;">Customer Reviews</h2>
+
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Jennifer Martinez</div>
+                            <div class="review-date">1 day ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Amazing Quality, Worth Every Penny!</div>
+                    <div class="review-text">I've been ordering from Organic Foods Co for 3 months now and the quality is consistently excellent. The produce is fresh, organic, and tastes so much better than supermarket options. Their customer service is also wonderful. Highly recommend!</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (18)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Robert Thompson</div>
+                            <div class="review-date">3 days ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Fresh Produce, Fast Delivery</div>
+                    <div class="review-text">Ordered organic vegetables and they arrived the next day, completely fresh and well-packaged. Everything was exactly as described. The prices are reasonable for certified organic products. Will order again!</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (14)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Amanda Cooper</div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Great Selection, Minor Issues</div>
+                    <div class="review-text">Love the variety of organic products available. One apple in my last order was slightly bruised, but the rest were perfect. Their meat selection is excellent. Overall very happy and will continue ordering.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (9)</a>
+                        <a href="#">Not Helpful (1)</a>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">David Lee</div>
+                            <div class="review-date">10 days ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Best Organic Grocery Store Online</div>
+                    <div class="review-text">Finally found a reliable source for truly organic produce. The certification details are transparently provided for each product. Prices are competitive, and the quality justifies the cost. Customer service responded to my inquiry within hours!</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (21)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Maria Santos</div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Changed My Family's Eating Habits</div>
+                    <div class="review-text">Started ordering organic produce here 6 months ago for my family's health. The quality and freshness have made such a difference. Kids actually enjoy eating vegetables now! This is our trusted go-to for groceries.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (26)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">James Wilson</div>
+                            <div class="review-date">3 weeks ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Solid Choice for Organic Needs</div>
+                    <div class="review-text">Good quality organic products with honest pricing. Delivery is reliable and products arrive fresh. One thing I'd like to see is more organic dairy options, but overall very satisfied with my purchases.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (7)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MarketPlace</h4>
+                <p>Your trusted online marketplace for quality products and verified businesses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MarketPlace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('#starRating span');
+        const ratingValue = document.getElementById('ratingValue');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingValue.value = rating;
+                
+                // Update star colors
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseover', function() {
+                const rating = this.getAttribute('data-rating');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.style.color = '#28a745';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('starRating').addEventListener('mouseout', function() {
+            const currentRating = ratingValue.value;
+            stars.forEach(s => {
+                if (s.getAttribute('data-rating') <= currentRating && currentRating > 0) {
+                    s.style.color = '#28a745';
+                } else {
+                    s.style.color = '#ddd';
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rating = document.getElementById('ratingValue').value;
+            
+            if (rating === '0') {
+                alert('Please select a rating');
+                return;
+            }
+
+            alert('Thank you for your review! It will be displayed after moderation.');
+            this.reset();
+            document.getElementById('ratingValue').value = '0';
+            stars.forEach(s => s.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>

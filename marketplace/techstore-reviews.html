@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store Reviews - MarketPlace</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">MarketPlace</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="reviews-container">
+            <!-- Reviews Header -->
+            <div class="reviews-header">
+                <h1>Tech Store Reviews</h1>
+                <p style="color: #666; margin-top: 10px;">See what our customers think about us</p>
+
+                <!-- Overall Rating Summary -->
+                <div class="overall-rating">
+                    <div class="rating-score">4.8</div>
+                    <div class="rating-details">
+                        <div style="margin-bottom: 10px;">
+                            <span style="color: #ffc107; font-size: 18px;">⭐⭐⭐⭐⭐</span>
+                            <span style="color: #666; font-size: 14px; margin-left: 10px;">Based on 245 reviews</span>
+                        </div>
+                        
+                        <div class="rating-bar">
+                            <span>5★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 65%;"></div></div>
+                            <span style="color: #666;">156</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 20%;"></div></div>
+                            <span style="color: #666;">49</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 10%;"></div></div>
+                            <span style="color: #666;">24</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 3%;"></div></div>
+                            <span style="color: #666;">7</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1★</span>
+                            <div class="bar"><div class="bar-fill" style="width: 2%;"></div></div>
+                            <span style="color: #666;">9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Submission Form -->
+            <div class="review-form-section">
+                <h2 style="margin-bottom: 20px;">Leave a Review</h2>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="text" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="star-rating" id="starRating">
+                            <span data-rating="1">★</span>
+                            <span data-rating="2">★</span>
+                            <span data-rating="3">★</span>
+                            <span data-rating="4">★</span>
+                            <span data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" name="rating" id="ratingValue" value="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Review Title</label>
+                        <input type="text" name="title" placeholder="Summarize your experience in a few words" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea name="review" placeholder="Share your experience with Tech Store..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Review</button>
+                </form>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-list">
+                <h2 style="margin-bottom: 20px;">Customer Reviews</h2>
+
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Sarah Johnson</div>
+                            <div class="review-date">2 days ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Excellent Quality and Fast Shipping!</div>
+                    <div class="review-text">I purchased wireless headphones and I'm very impressed with the quality and speed of delivery. The product arrived in perfect condition and works exactly as described. Highly recommended!</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (12)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Michael Chen</div>
+                            <div class="review-date">5 days ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Great Products, Good Prices</div>
+                    <div class="review-text">Found exactly what I needed at competitive prices. Customer service was responsive when I had questions. The only reason it's 4 stars instead of 5 is that shipping took a bit longer than expected, but overall very satisfied.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (8)</a>
+                        <a href="#">Not Helpful (1)</a>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Emily Rodriguez</div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Perfect for My Needs</div>
+                    <div class="review-text">I bought a USB-C cable and phone stand for my desk setup. Both items are durable and look great. The prices are better than other retailers I checked. Will definitely be ordering again!</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (15)</a>
+                        <a href="#">Not Helpful (0)</a>
+                    </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">David Park</div>
+                            <div class="review-date">10 days ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Good, But Not Perfect</div>
+                    <div class="review-text">Products are good quality but the packaging could be better. One item had a small dent when it arrived, though it still works fine. Customer service helped replace it quickly. Overall decent experience.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (5)</a>
+                        <a href="#">Not Helpful (2)</a>
+                    </div>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-name">Lisa Thompson</div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-title">Best Tech Store Around!</div>
+                    <div class="review-text">I've been a customer for over a year now and have never been disappointed. The product selection is great, prices are competitive, and their customer service is exceptional. Definitely my go-to place for tech gadgets.</div>
+                    <div class="review-footer">
+                        <span>Verified Purchase</span>
+                        <a href="#">Helpful (22)</a>
+                        <a href="#">Not Helpful (1)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MarketPlace</h4>
+                <p>Your trusted online marketplace for quality products and verified businesses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="techstore-detail.html">Tech Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MarketPlace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('#starRating span');
+        const ratingValue = document.getElementById('ratingValue');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingValue.value = rating;
+                
+                // Update star colors
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+
+            star.addEventListener('mouseover', function() {
+                const rating = this.getAttribute('data-rating');
+                stars.forEach(s => {
+                    if (s.getAttribute('data-rating') <= rating) {
+                        s.style.color = '#ffc107';
+                    } else {
+                        s.style.color = '#ddd';
+                    }
+                });
+            });
+        });
+
+        document.getElementById('starRating').addEventListener('mouseout', function() {
+            const currentRating = ratingValue.value;
+            stars.forEach(s => {
+                if (s.getAttribute('data-rating') <= currentRating && currentRating > 0) {
+                    s.style.color = '#ffc107';
+                } else {
+                    s.style.color = '#ddd';
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rating = document.getElementById('ratingValue').value;
+            
+            if (rating === '0') {
+                alert('Please select a rating');
+                return;
+            }
+
+            alert('Thank you for your review! It will be displayed after moderation.');
+            this.reset();
+            document.getElementById('ratingValue').value = '0';
+            stars.forEach(s => s.classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
