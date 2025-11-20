@@ -711,6 +711,12 @@ button {
     flex-shrink: 0;
 }
 
+.business-banner > img {
+    border-radius: 5px;
+    width: 1082px;
+    height: 400px
+}
+
 .business-header-info h1 {
     margin-bottom: 0.5rem;
 }
