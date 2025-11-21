@@ -169,6 +169,28 @@ const initMobileNav = () => {
     }
 };
 
+// ==================== Dashboard Sidebar Mobile Toggle ====================
+const initDashboardSidebar = () => {
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.sidebar');
+
+    if (hamburger && sidebar) {
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    }
+
+    // Close sidebar when a nav item is clicked
+    const navItems = document.querySelectorAll('.sidebar .nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+            }
+        });
+    });
+};
+
 // ==================== Search and Filter ====================
 const initSearch = () => {
     const searchInput = document.getElementById('searchInput');
@@ -320,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDashboard();
     initModals();
     initMobileNav();
+    initDashboardSidebar();
     initSearch();
     initBusinessActions();
     initAdminActions();
