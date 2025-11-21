@@ -2098,16 +2098,540 @@ button {
     background: #f0f0f0;
 }
 
-@media (max-width: 768px) {
-    .feature-list {
+/* ==================== Responsive: Tablet (768px - 1024px) ==================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .features-grid,
+    .businesses-grid,
+    .products-grid,
+    .testimonial-grid,
+    .category-grid,
+    .requests-list,
+    .businesses-admin-grid,
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .marketplace-header h1 {
+        font-size: 2rem;
+    }
+
+    .business-details-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .filter-container {
         grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-header h1 {
+        font-size: 24px;
     }
 
     .sc-header h1 {
         font-size: 28px;
     }
 
-    .category-grid, .testimonial-grid {
+    .feature-list {
         grid-template-columns: 1fr;
+    }
+
+    .overall-rating {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rating-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bar {
+        width: 100%;
+    }
+}
+
+/* ==================== Responsive: Mobile (480px - 767px) ==================== */
+@media (max-width: 767px) {
+    /* Navigation */
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        z-index: 99;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid #34495e;
+    }
+
+    .nav-menu a,
+    .nav-menu span {
+        padding: 1rem;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-shape {
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Typography */
+    .features h2,
+    .marketplace-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .review-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .sc-header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Grids & Cards */
+    .features-grid,
+    .businesses-grid,
+    .products-grid,
+    .testimonial-grid,
+    .category-grid,
+    .requests-list,
+    .businesses-admin-grid,
+    .reports-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.6rem;
+        font-size: 16px;
+    }
+
+    .auth-box {
+        padding: 1.5rem;
+    }
+
+    .register-box {
+        max-width: 100%;
+    }
+
+    /* Business Details */
+    .business-details-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .business-logo {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1rem;
+    }
+
+    .business-banner {
+        height: 150px;
+        margin-bottom: -40px;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    /* Marketplace */
+    .marketplace-filters {
+        padding: 0 1rem;
+    }
+
+    .filter-container {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    /* Dashboard */
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        padding: 1rem 0;
+        display: none;
+    }
+
+    .sidebar.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        padding: 0.75rem 1rem;
+        flex: 1 1 50%;
+        border-left: none;
+        border-bottom: 1px solid #444;
+    }
+
+    .dashboard-content {
+        padding: 1rem;
+    }
+
+    /* Tables */
+    .products-table-container,
+    .users-table-container {
+        overflow-x: auto;
+    }
+
+    .products-table,
+    .users-table {
+        font-size: 0.8rem;
+    }
+
+    .products-table th,
+    .products-table td,
+    .users-table th,
+    .users-table td {
+        padding: 0.5rem 0.3rem;
+    }
+
+    /* Review Pages */
+    .reviews-container {
+        padding: 1rem;
+    }
+
+    .overall-rating {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rating-score {
+        font-size: 32px;
+    }
+
+    .rating-details {
+        text-align: center;
+    }
+
+    .rating-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bar {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .review-form-section {
+        padding: 1.5rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea {
+        padding: 0.75rem;
+    }
+
+    .rating-options {
+        flex-wrap: wrap;
+    }
+
+    .rating-option {
+        flex: 1 1 auto;
+        min-width: 40px;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .rating-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-item {
+        padding: 1rem;
+    }
+
+    .review-header-item {
+        flex-direction: column;
+    }
+
+    .review-details {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .review-footer {
+        flex-wrap: wrap;
+    }
+
+    /* Fashion Hub Styles & Comfort */
+    .sc-header {
+        padding-bottom: 1.5rem;
+    }
+
+    .sc-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .intro-section {
+        padding: 1.5rem;
+    }
+
+    .features-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .category-card {
+        padding: 1.5rem;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .size-guide-section {
+        padding: 1.5rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-item {
+        border-right: none;
+    }
+
+    /* Buttons & Actions */
+    .request-actions,
+    .business-actions,
+    .admin-card-actions {
+        flex-direction: column;
+    }
+
+    .request-actions .btn,
+    .business-actions .btn,
+    .admin-card-actions .btn,
+    .filter-tabs .filter-btn {
+        width: 100%;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+        gap: 0.5rem;
+    }
+
+    .filter-tabs .filter-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==================== Responsive: Small Mobile (< 480px) ==================== */
+@media (max-width: 479px) {
+    .nav-container {
+        padding: 0 0.75rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-shape {
+        width: 150px;
+        height: 150px;
+    }
+
+    .features h2,
+    .marketplace-header h1,
+    .sc-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .review-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .review-header p {
+        font-size: 0.9rem;
+    }
+
+    .rating-score {
+        font-size: 28px;
+    }
+
+    .business-banner {
+        height: 120px;
+        margin-bottom: -30px;
+    }
+
+    .business-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .review-form-section {
+        padding: 1rem;
+    }
+
+    .rating-summary {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-details {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+        padding: 0.75rem;
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .products-table th,
+    .products-table td,
+    .users-table th,
+    .users-table td {
+        padding: 0.4rem 0.2rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .cta-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .cta-section p {
+        font-size: 0.9rem;
     }
 }

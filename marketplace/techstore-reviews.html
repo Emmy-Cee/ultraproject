@@ -296,5 +296,144 @@
             stars.forEach(s => s.classList.remove('active'));
         });
     </script>
+
+    <style>
+        /* Mobile & Tablet Responsive */
+        @media (max-width: 768px) {
+            .reviews-container {
+                padding: 1rem;
+            }
+
+            .reviews-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .rating-score {
+                font-size: 32px;
+            }
+
+            .overall-rating {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rating-details {
+                text-align: center;
+            }
+
+            .rating-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bar {
+                width: 100%;
+                max-width: 150px;
+            }
+
+            .review-form-section {
+                padding: 1.5rem;
+            }
+
+            .form-group input[type="text"],
+            .form-group textarea {
+                padding: 0.6rem;
+                font-size: 16px;
+            }
+
+            .star-rating {
+                gap: 5px;
+                font-size: 20px;
+            }
+
+            .review-item {
+                padding: 1rem;
+            }
+
+            .review-header {
+                flex-direction: column;
+            }
+
+            .review-footer {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .reviews-container {
+                padding: 0.75rem;
+            }
+
+            .reviews-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .reviews-header p {
+                font-size: 0.9rem;
+            }
+
+            .rating-score {
+                font-size: 28px;
+            }
+
+            .rating-bar {
+                font-size: 12px;
+                gap: 6px;
+            }
+
+            .review-form-section {
+                padding: 1rem;
+                margin-bottom: 20px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                font-size: 0.9rem;
+            }
+
+            .form-group input[type="text"],
+            .form-group textarea {
+                padding: 0.5rem;
+                font-size: 14px;
+            }
+
+            .star-rating {
+                gap: 3px;
+                font-size: 18px;
+            }
+
+            .btn-submit {
+                width: 100%;
+                padding: 10px 15px;
+            }
+
+            .review-item {
+                padding: 0.75rem;
+                margin-bottom: 10px;
+            }
+
+            .review-title {
+                font-size: 14px;
+            }
+
+            .review-text {
+                font-size: 13px;
+            }
+
+            .review-footer {
+                font-size: 12px;
+                flex-direction: column;
+            }
+
+            .reviews-list h2 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </body>
 </html>
