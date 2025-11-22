@@ -54,13 +54,14 @@
                 <p>Fresh Food Market is a community-focused grocer partnering with local farmers and small producers to deliver seasonal, sustainably sourced produce, dairy, and ready-to-eat meals—fresh quality for every table.</p>
             </div>
 
-            <div class="info-card">
+            <div class="info-card" id="contact">
                 <h3>Contact Information</h3>
                 <ul>
                     <li>📍 Address:  456 Market Ave, City</li>
-                    <li>📞 Phone: +1 (555) 123-4567</li>
-                    <li>📧 Email: contact@freshfoodmarket.com</li>
-                    <li>🌐 Website: www.freshfoodmarket.com</li>
+                    <li>📞 Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                    <li>📧 Email: <a href="mailto:contact@freshfoodmarket.com">contact@freshfoodmarket.com</a></li>
+                    <li>🌐 Website: <a href="https://www.freshfoodmarket.com" target="_blank" rel="noopener">www.freshfoodmarket.com</a></li>
+                    <li>💬 <a href="#chat">Chat with Owner</a></li>
                 </ul>
             </div>
 
@@ -90,7 +91,7 @@
                             <span class="stock">Stock: 15</span>
                             <span class="rating">⭐⭐⭐⭐⭐</span>
                         </div>
-                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <a href="#contact" class="btn btn-primary btn-small">Contact Seller</a>
                     </div>
                 </div>
 
@@ -106,7 +107,7 @@
                             <span class="stock">Stock: 45</span>
                             <span class="rating">⭐⭐⭐⭐</span>
                         </div>
-                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <a href="#contact" class="btn btn-primary btn-small">Contact Seller</a>
                     </div>
                 </div>
 
@@ -122,7 +123,7 @@
                             <span class="stock">Stock: 30</span>
                             <span class="rating">⭐⭐⭐⭐⭐</span>
                         </div>
-                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <a href="#contact" class="btn btn-primary btn-small">Contact Seller</a>
                     </div>
                 </div>
 
@@ -138,11 +139,25 @@
                             <span class="stock">Stock: 60</span>
                             <span class="rating">⭐⭐⭐⭐</span>
                         </div>
-                        <button class="btn btn-primary btn-small">Add to Cart</button>
+                        <a href="#contact" class="btn btn-primary btn-small">Contact Seller</a>
                     </div>
                 </div>
             </div>
         </section>
+            <!-- Chat / Contact CTA -->
+            <section id="chat" class="contact-chat" style="margin:2rem 0;">
+                <h2>Chat with Owner</h2>
+                <p>Send a quick message to the owner or call directly.</p>
+                <form class="form chat-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <textarea id="chatMessageFresh" rows="3" placeholder="Write your message to the owner..."></textarea>
+                    </div>
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <button type="button" class="btn btn-primary btn-small" onclick="(function(el){const ta=el.closest('section').querySelector('textarea');const v=ta.value.trim();if(!v){alert('Please enter a message.');return;}alert('Message sent to owner (mock):\n'+v);ta.value='';})(this)">Send</button>
+                        <a href="tel:+15551234567" class="btn btn-success btn-small">Call Seller</a>
+                    </div>
+                </form>
+            </section>
     </div>
 
     <!-- Footer -->

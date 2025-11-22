@@ -45,7 +45,8 @@ const handleRegister = (event) => {
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('regEmail').value;
     const phone = document.getElementById('phone').value;
-    const role = document.getElementById('role').value;
+    const roleEl = document.getElementById('role');
+    const role = roleEl ? roleEl.value : 'business_owner';
     const password = document.getElementById('regPassword').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
@@ -54,7 +55,7 @@ const handleRegister = (event) => {
         return;
     }
 
-    if (role === '') {
+    if (document.getElementById('role') && role === '') {
         showAlert('Please select a role!', 'error');
         return;
     }
@@ -106,41 +107,11 @@ const initDashboard = () => {
 };
 
 // ==================== Modal Functionality ====================
+// The add-business modal was replaced by a dedicated `add-business.html` page.
+// Keep initModals as a no-op to avoid attaching modal listeners accidentally.
 const initModals = () => {
-    const modal = document.getElementById('addBusinessModal');
-    const addBtn = document.querySelector('.btn-add-business');
-    const closeBtn = document.querySelector('.close');
-
-    if (addBtn && modal) {
-        addBtn.addEventListener('click', () => {
-            modal.classList.add('active');
-        });
-    }
-
-    if (closeBtn && modal) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-    }
-
-    if (modal) {
-        window.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    }
-
-    // Handle modal form submission
-    const modalForm = document.querySelector('#addBusinessModal .form');
-    if (modalForm) {
-        modalForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            showAlert('Business request created successfully!', 'success');
-            modal.classList.remove('active');
-            modalForm.reset();
-        });
-    }
+    // Modal functionality intentionally disabled. Use `add-business.html` instead.
+    return;
 };
 
 // ==================== Form Handlers ====================

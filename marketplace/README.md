@@ -5,28 +5,31 @@ A complete marketplace application built with HTML, CSS, and JavaScript where bu
 ## 🌟 Features
 
 ### Business Owners
+
 ✅ User Registration & Login  
 ✅ Create Business Registration Requests  
 ✅ Add, Edit, and Delete Products  
 ✅ Manage Business Address & Contact Info  
 ✅ Track Business Approval Status  
 ✅ View Business Dashboard with Analytics  
-✅ Manage Product Inventory  
+✅ Manage Product Inventory
 
 ### Admins
+
 ✅ Review Business Registration Requests  
 ✅ Approve/Reject Business Requests with Notes  
 ✅ Delete Businesses if Needed  
 ✅ Manage All Users  
 ✅ View Platform Analytics & Reports  
-✅ Monitor All Businesses  
+✅ Monitor All Businesses
 
 ### Customers
+
 ✅ Browse Approved Businesses  
 ✅ View Products from Different Shops  
 ✅ Search Products & Businesses  
 ✅ Filter by Category  
-✅ View Detailed Business Information  
+✅ View Detailed Business Information
 
 ## 📁 Project Structure
 
@@ -47,26 +50,33 @@ ultraproject/
 ## 🚀 Quick Start
 
 ### Option 1: Open in Browser (Easiest)
+
 Simply open any HTML file directly in your web browser:
+
 - **index.html** - Home page
 - **marketplace.html** - Browse marketplace
 - **login.html** - Login page
 
 ### Option 2: Use a Local Server
+
 For better development experience, run a local server:
 
 **Using Python 3:**
+
 ```bash
 python -m http.server 8000
 ```
+
 Then open `http://localhost:8000` in your browser
 
 **Using Python 2:**
+
 ```bash
 python -m SimpleHTTPServer 8000
 ```
 
 **Using Node.js (http-server):**
+
 ```bash
 npx http-server
 ```
@@ -74,16 +84,19 @@ npx http-server
 ## 🔐 Demo Credentials
 
 ### Business Owner Account
+
 - **Email:** owner@marketplace.org
 - **Password:** password123
 
 ### Admin Account
+
 - **Email:** admin@marketplace.org
 - **Password:** password123
 
 ## 📋 Pages Overview
 
 ### Public Pages
+
 1. **index.html** - Home page with features and statistics
 2. **marketplace.html** - Browse businesses and products with search/filter
 3. **business-details.html** - View individual business and its products
@@ -93,6 +106,7 @@ npx http-server
 ### Protected Pages (Require Login)
 
 #### Business Owner Dashboard
+
 - **business-owner-dashboard.html**
   - Overview with statistics
   - Business registration requests
@@ -101,6 +115,7 @@ npx http-server
   - Account settings
 
 #### Admin Dashboard
+
 - **admin-dashboard.html**
   - Dashboard overview
   - Business request review & approval/rejection
@@ -111,11 +126,13 @@ npx http-server
 ## 🎨 Design Features
 
 ### Responsive Design
+
 - Mobile-first approach
 - Breakpoints at 768px and 480px
 - Hamburger menu for mobile navigation
 
 ### Modern UI Components
+
 - Navigation bar with sticky positioning
 - Hero section with gradient backgrounds
 - Feature cards with hover effects
@@ -125,6 +142,7 @@ npx http-server
 - Statistics cards
 
 ### Color Scheme
+
 ```css
 Primary Color: #007bff (Blue)
 Secondary Color: #6c757d (Gray)
@@ -138,6 +156,7 @@ Light Background: #f5f5f5
 ## 💻 HTML Pages Details
 
 ### 1. index.html - Home Page
+
 - Hero section with call-to-action
 - Features section highlighting benefits
 - Statistics section
@@ -145,20 +164,22 @@ Light Background: #f5f5f5
 - Footer with links
 
 ### 2. login.html - Login Page
+
 - Email and password fields
 - "Remember me" checkbox
 - Demo credentials display
 - Link to registration
 
 ### 3. register.html - Registration Page
+
 - First name and last name fields
 - Email address
 - Phone number
-- Role selection (Customer/Business Owner)
 - Password confirmation
 - Terms acceptance checkbox
 
 ### 4. marketplace.html - Marketplace
+
 - Search and filter functionality
 - Featured businesses grid
 - Latest products grid
@@ -166,13 +187,16 @@ Light Background: #f5f5f5
 - Product cards with prices
 
 ### 5. business-details.html - Business Shop
+
 - Business banner and logo
 - Business information (about, contact, hours)
 - Products listing
 - Product details (price, stock, rating)
 
 ### 6. business-owner-dashboard.html - Business Owner Dashboard
+
 **Tabs:**
+
 - **Overview:** Quick stats and recent activity
 - **Business Requests:** Create and track business registration requests
 - **My Businesses:** View and manage owned businesses
@@ -180,7 +204,9 @@ Light Background: #f5f5f5
 - **Settings:** Update profile and password
 
 ### 7. admin-dashboard.html - Admin Dashboard
+
 **Tabs:**
+
 - **Overview:** Platform statistics and recent requests
 - **Business Requests:** Review and approve/reject business requests
 - **All Businesses:** Manage all businesses on platform
@@ -190,18 +216,21 @@ Light Background: #f5f5f5
 ## 🎯 Functionality
 
 ### Form Handling
+
 - Client-side validation
 - Form submission with JavaScript
 - Success/error alerts
 - Local storage integration
 
 ### Authentication Flow
+
 1. User fills registration/login form
 2. Credentials validated
 3. User data stored in localStorage
 4. Redirected to appropriate dashboard
 
 ### Dashboard Features
+
 - Tab navigation system
 - Data display and management
 - Modal dialogs for forms
@@ -209,6 +238,7 @@ Light Background: #f5f5f5
 - Status indicators
 
 ### Interactive Elements
+
 - Search and filter
 - Add to cart (demo)
 - Business request creation
@@ -226,6 +256,7 @@ Small Mobile: < 480px
 ```
 
 Adjust layouts for:
+
 - Navigation (hamburger menu on mobile)
 - Grid columns
 - Font sizes
@@ -235,6 +266,7 @@ Adjust layouts for:
 ## 🛠️ JavaScript Features
 
 ### Core Functionality
+
 - Form validation and submission
 - Tab navigation in dashboards
 - Modal dialog management
@@ -244,11 +276,13 @@ Adjust layouts for:
 - Logout functionality
 
 ### Data Management
+
 - localStorage for user data
 - Demo data storage
 - Session management
 
 ### User Feedback
+
 - Alert notifications
 - Success/Error messages
 - Confirmation dialogs
@@ -256,6 +290,7 @@ Adjust layouts for:
 ## 🔄 Workflow Examples
 
 ### Business Owner Registration & Shop Setup
+
 1. Visit `register.html`
 2. Fill registration form with Business Owner role
 3. Redirected to `business-owner-dashboard.html`
@@ -266,6 +301,7 @@ Adjust layouts for:
 8. Once approved, add products
 
 ### Admin Approving Businesses
+
 1. Visit `admin-dashboard.html`
 2. Go to "Business Requests" tab
 3. Review pending requests
@@ -274,6 +310,7 @@ Adjust layouts for:
 6. Status updates in real-time
 
 ### Customer Browsing
+
 1. Visit `index.html` home page
 2. Click "Browse Businesses"
 3. Browse marketplace on `marketplace.html`
@@ -285,6 +322,7 @@ Adjust layouts for:
 ## 🎨 CSS Classes Reference
 
 ### Button Classes
+
 ```html
 <button class="btn btn-primary">Primary</button>
 <button class="btn btn-secondary">Secondary</button>
@@ -297,6 +335,7 @@ Adjust layouts for:
 ```
 
 ### Status Badges
+
 ```html
 <span class="status-badge pending">Pending</span>
 <span class="status-badge approved">Approved</span>
@@ -305,6 +344,7 @@ Adjust layouts for:
 ```
 
 ### Card Classes
+
 ```html
 <div class="business-card">...</div>
 <div class="product-card">...</div>
@@ -315,6 +355,7 @@ Adjust layouts for:
 ## 📊 Data Structure (localStorage)
 
 ### User Object
+
 ```javascript
 {
   name: "John Doe",
@@ -326,6 +367,7 @@ Adjust layouts for:
 ```
 
 ### Business Object
+
 ```javascript
 {
   id: "business_1",
@@ -342,6 +384,7 @@ Adjust layouts for:
 ```
 
 ### Product Object
+
 ```javascript
 {
   id: "product_1",
@@ -407,6 +450,7 @@ To extend this marketplace:
 ## 📞 Support
 
 For issues or questions:
+
 1. Check the HTML file comments
 2. Check browser console for errors
 3. Review demo credentials in login page
@@ -422,3 +466,9 @@ This project is open source and available for educational and commercial use.
 
 Last Updated: November 14, 2025
 
+## 📝 Recent Changes
+
+### November 22, 2025
+
+- Updated `register.html` to restrict registration to business owners only by removing the role selector and adding a hidden input for the role.
+- Modified `app.js` to default the role to `business_owner` when the role selector is not present and adjusted validation accordingly.
