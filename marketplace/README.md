@@ -1,263 +1,171 @@
-# MarketPlace - Full Stack Application
+# UltraProject Marketplace
 
-A complete marketplace application built with HTML, CSS, and JavaScript where business owners can register businesses, manage products, and admins can approve businesses.
+A full-stack Next.js marketplace application built with React App Router, NextAuth, MongoDB/Mongoose, and Paystack integration.
 
 ## 🌟 Features
 
-### Business Owners
+### Authentication
 
-✅ User Registration & Login  
-✅ Create Business Registration Requests  
-✅ Add, Edit, and Delete Products  
-✅ Manage Business Address & Contact Info  
-✅ Track Business Approval Status  
-✅ View Business Dashboard with Analytics  
-✅ Manage Product Inventory
+- Email/password login with `next-auth`
+- Role-aware access for users, vendors, and admins
+- Secure server-side session handling
 
-### Admins
+### Marketplace
 
-✅ Review Business Registration Requests  
-✅ Approve/Reject Business Requests with Notes  
-✅ Delete Businesses if Needed  
-✅ Manage All Users  
-✅ View Platform Analytics & Reports  
-✅ Monitor All Businesses
+- Browse products and vendors
+- Product details and filtering
+- Cart and order flow
+- Customer order history
 
-### Customers
+### Vendor Experience
 
-✅ Browse Approved Businesses  
-✅ View Products from Different Shops  
-✅ Search Products & Businesses  
-✅ Filter by Category  
-✅ View Detailed Business Information
+- Vendor dashboard for product management
+- Product count, order count, and revenue summary
+- Add/edit vendor products through the UI
+
+### Admin Experience
+
+- Admin dashboard access
+- User and order visibility
+- Platform-level insights and controls
+
+### Payments & Uploads
+
+- Paystack payment integration
+- Image upload support via Cloudinary
+- API routes for products, orders, reviews, users, and uploads
+
+## 🧱 Tech Stack
+
+- `next` (App Router)
+- `react`
+- `next-auth`
+- `mongoose`
+- `mongodb`
+- `typescript`
+- `cloudinary`
+- `paystack`
 
 ## 📁 Project Structure
 
 ```
-ultraproject/
-├── index.html                    # Home page
-├── login.html                    # Login page
-├── register.html                 # Registration page
-├── marketplace.html              # Browse businesses & products
-├── business-details.html         # Business shop page
-├── business-owner-dashboard.html # Business owner dashboard
-├── admin-dashboard.html          # Admin control panel
-├── styles.css                    # Complete styling
-├── app.js                        # JavaScript functionality
-└── README.md                     # Documentation
+marketplace/
+├── app/
+│   ├── admin/              # Admin dashboard page
+│   ├── api/                # API route handlers
+│   ├── cart/               # Cart page
+│   ├── dashboard/          # User/vendor dashboard
+│   ├── login/              # Login page
+│   ├── orders/             # Orders page
+│   ├── products/           # Product listing and details
+│   ├── register/           # Registration page
+│   ├── vendor/             # Vendor dashboard and actions
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout and metadata
+│   └── page.tsx            # Home page
+├── components/             # Reusable UI components
+├── lib/                    # Auth, DB, and helper utilities
+├── models/                 # Mongoose models
+├── types/                  # Type declarations
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
-### Option 1: Open in Browser (Easiest)
-
-Simply open any HTML file directly in your web browser:
-
-- **index.html** - Home page
-- **marketplace.html** - Browse marketplace
-- **login.html** - Login page
-
-### Option 2: Use a Local Server
-
-For better development experience, run a local server:
-
-**Using Python 3:**
+1. Install dependencies:
 
 ```bash
-python -m http.server 8000
+npm install
 ```
 
-Then open `http://localhost:8000` in your browser
+2. Create a `.env.local` file from `.env.example` and fill in the values:
 
-**Using Python 2:**
+- `MONGODB_URI`
+- `NEXTAUTH_URL`
+- `NEXTAUTH_SECRET`
+- `CLOUDINARY_CLOUD_NAME`
+- `CLOUDINARY_API_KEY`
+- `CLOUDINARY_API_SECRET`
+- `PAYSTACK_SECRET_KEY`
+- `PAYSTACK_PUBLIC_KEY`
+
+3. Run the development server:
 
 ```bash
-python -m SimpleHTTPServer 8000
+npm run dev
 ```
 
-**Using Node.js (http-server):**
+4. Open your browser:
 
-```bash
-npx http-server
+```text
+http://localhost:3000
 ```
 
-## 🔐 Demo Credentials
+## 🚧 App Routes
 
-### Business Owner Account
+### Public Routes
 
-- **Email:** owner@marketplace.org
-- **Password:** password123
+- `/` — Home page
+- `/products` — Product catalog
+- `/products/[id]` — Product details
+- `/login` — Login page
+- `/register` — Registration page
 
-### Admin Account
+### Authenticated Routes
 
-- **Email:** admin@marketplace.org
-- **Password:** password123
+- `/dashboard` — User/vendor dashboard
+- `/orders` — User order history
+- `/cart` — Shopping cart
 
-## 📋 Pages Overview
+### Vendor/Admin Routes
 
-### Public Pages
+- `/vendor` — Vendor dashboard
+- `/admin` — Admin dashboard
 
-1. **index.html** - Home page with features and statistics
-2. **marketplace.html** - Browse businesses and products with search/filter
-3. **business-details.html** - View individual business and its products
-4. **login.html** - User login page
-5. **register.html** - New user registration
+## 🔌 API Routes
 
-### Protected Pages (Require Login)
+- `/api/auth` — Authentication handlers
+- `/api/products` — Product create/read/update/delete
+- `/api/orders` — Order processing and retrieval
+- `/api/cart` — Cart actions
+- `/api/users` — User-related APIs
+- `/api/reviews` — Product reviews
+- `/api/uploads` — Image upload handling
+- `/api/paystack` — Payment initialization and verification
 
-#### Business Owner Dashboard
+## ⚙️ Environment Variables
 
-- **business-owner-dashboard.html**
-  - Overview with statistics
-  - Business registration requests
-  - My businesses management
-  - Product management
-  - Account settings
+Use `.env.local` with these keys:
 
-#### Admin Dashboard
-
-- **admin-dashboard.html**
-  - Dashboard overview
-  - Business request review & approval/rejection
-  - All businesses management
-  - User management
-  - Reports & analytics
-
-## 🎨 Design Features
-
-### Responsive Design
-
-- Mobile-first approach
-- Breakpoints at 768px and 480px
-- Hamburger menu for mobile navigation
-
-### Modern UI Components
-
-- Navigation bar with sticky positioning
-- Hero section with gradient backgrounds
-- Feature cards with hover effects
-- Modal dialogs for forms
-- Data tables with sorting
-- Status badges
-- Statistics cards
-
-### Color Scheme
-
-```css
-Primary Color: #007bff (Blue)
-Secondary Color: #6c757d (Gray)
-Success Color: #28a745 (Green)
-Danger Color: #dc3545 (Red)
-Warning Color: #ffc107 (Yellow)
-Dark Background: #2c3e50
-Light Background: #f5f5f5
+```env
+MONGODB_URI=
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+PAYSTACK_SECRET_KEY=
+PAYSTACK_PUBLIC_KEY=
 ```
 
-## 💻 HTML Pages Details
+## 💡 Notes
 
-### 1. index.html - Home Page
+- The project now uses the **Next.js App Router** and is database-ready.
+- Legacy static HTML/CSS/JS files have been removed in favor of the app-based implementation.
+- Make sure MongoDB and Cloudinary credentials are configured before running locally.
 
-- Hero section with call-to-action
-- Features section highlighting benefits
-- Statistics section
-- CTA section
-- Footer with links
+## 📦 Scripts
 
-### 2. login.html - Login Page
+- `npm run dev` — Start development server
+- `npm run build` — Build production app
+- `npm start` — Start built app
 
-- Email and password fields
-- "Remember me" checkbox
-- Demo credentials display
-- Link to registration
+## 📝 License
 
-### 3. register.html - Registration Page
+This repository is provided for development and learning purposes.
 
-- First name and last name fields
-- Email address
-- Phone number
-- Password confirmation
-- Terms acceptance checkbox
-
-### 4. marketplace.html - Marketplace
-
-- Search and filter functionality
-- Featured businesses grid
-- Latest products grid
-- Business cards with ratings
-- Product cards with prices
-
-### 5. business-details.html - Business Shop
-
-- Business banner and logo
-- Business information (about, contact, hours)
-- Products listing
-- Product details (price, stock, rating)
-
-### 6. business-owner-dashboard.html - Business Owner Dashboard
-
-**Tabs:**
-
-- **Overview:** Quick stats and recent activity
-- **Business Requests:** Create and track business registration requests
-- **My Businesses:** View and manage owned businesses
-- **Products:** Manage product inventory
-- **Settings:** Update profile and password
-
-### 7. admin-dashboard.html - Admin Dashboard
-
-**Tabs:**
-
-- **Overview:** Platform statistics and recent requests
-- **Business Requests:** Review and approve/reject business requests
-- **All Businesses:** Manage all businesses on platform
-- **Users:** User management table
-- **Reports:** Analytics and reports
-
-## 🎯 Functionality
-
-### Form Handling
-
-- Client-side validation
-- Form submission with JavaScript
-- Success/error alerts
-- Local storage integration
-
-### Authentication Flow
-
-1. User fills registration/login form
-2. Credentials validated
-3. User data stored in localStorage
-4. Redirected to appropriate dashboard
-
-### Dashboard Features
-
-- Tab navigation system
-- Data display and management
-- Modal dialogs for forms
-- Action buttons (Edit, Delete, Approve, Reject)
-- Status indicators
-
-### Interactive Elements
-
-- Search and filter
-- Add to cart (demo)
-- Business request creation
-- Product management
-- User management
-- Business approval workflow
-
-## 📱 Responsive Breakpoints
-
-```css
-Desktop: 1200px+
-Tablet: 768px - 1199px
-Mobile: < 768px
-Small Mobile: < 480px
-```
-
-Adjust layouts for:
-
-- Navigation (hamburger menu on mobile)
 - Grid columns
 - Font sizes
 - Padding and margins
