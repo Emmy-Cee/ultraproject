@@ -5,6 +5,7 @@ import CreateOrderButton from '../../components/CreateOrderButton'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '../../lib/nextAuth'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 export default async function CartPage() {
   const session = await getServerSession(authOptions)
@@ -20,14 +21,36 @@ export default async function CartPage() {
   return (
     <main className="page-shell">
       <section className="cart-page">
-        <h1>Your Cart</h1>
+        <h1>Your Shopping Cart</h1>
         {items.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <div className="empty-cart">
+            <div className="empty-cart-icon">🛒</div>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <Link href="/marketplace" className="btn-primary">
+              Start Shopping
+            </Link>
+          </div>
         ) : (
           <>
-            <CartActions items={items as any} />
+            <div className="cart-items">
+              <CartActions items={items as any} />
+            </div>
             <div className="cart-summary">
-              <p>Total: ${total.toFixed(2)}</p>
+              <div className="summary-details">
+                <div className="summary-row">
+                  <span>Subtotal ({items.length} items)</span>
+                  <span>${total.toFixed(2)}</span>
+                </div>
+                <div className="summary-row">
+                  <span>Shipping</span>
+                  <span>Free</span>
+                </div>
+                <div className="summary-row total">
+                  <span>Total</span>
+                  <span>${total.toFixed(2)}</span>
+                </div>
+              </div>
               <CreateOrderButton />
             </div>
           </>

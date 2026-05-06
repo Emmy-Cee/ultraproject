@@ -1,6 +1,6 @@
 import { connectToDatabase } from '../../lib/mongodb'
 import Product from '../../models/Product'
-import ProductCard from '../../components/ProductCard'
+import ProductFilter from '../../components/ProductFilter'
 
 export default async function ProductsPage() {
   await connectToDatabase()
@@ -8,23 +8,7 @@ export default async function ProductsPage() {
 
   return (
     <main className="page-shell">
-      <section className="list-header">
-        <h1>Products</h1>
-        <p>Shop from our catalog of vendor listings.</p>
-      </section>
-      <section className="product-grid">
-        {products.map((product) => (
-          <ProductCard
-            key={product._id.toString()}
-            id={product._id.toString()}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            image={product.image}
-            vendorName={product.vendor?.name}
-          />
-        ))}
-      </section>
+      <ProductFilter initialProducts={products as any} />
     </main>
   )
 }

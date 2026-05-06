@@ -5,6 +5,8 @@ import { connectToDatabase } from '../../lib/mongodb'
 import User from '../../models/User'
 import Product from '../../models/Product'
 import Order from '../../models/Order'
+import ProductManager from '../../components/ProductManager'
+import AdminUserManager from '../../components/AdminUserManager'
 
 export default async function AdminPage() {
   const session = await getServerSession(authOptions)
@@ -41,22 +43,18 @@ export default async function AdminPage() {
         </div>
       </section>
       <section className="dashboard-card">
-        <h2>Recent users</h2>
-        <ul>
-          {users.slice(-5).reverse().map((user) => (
-            <li key={user._id.toString()}>
-              {user.name} ({user.email}) — {user.role}
-            </li>
-          ))}
-        </ul>
+        <AdminUserManager
+          initialUsers={users.map((user) => ({
+            id: user._id.toString(),
+            name: user.name,
+            email: user.email,
+            role: user.role,
+          }))}
+        />
       </section>
       <section className="dashboard-card">
-        <h2>Recent products</h2>
-        <ul>
-          {products.slice(-5).reverse().map((product) => (
-            <li key={product._id.toString()}>{product.title}</li>
-          ))}
-        </ul>
+        <h2>Manage products</h2>
+        <ProductManager products={products as any} />
       </section>
     </main>
   )

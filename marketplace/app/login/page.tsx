@@ -9,11 +9,13 @@ export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const router = useRouter()
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setError('')
+    setLoading(true)
 
     const result = await signIn('credentials', {
       redirect: false,
@@ -23,6 +25,7 @@ export default function LoginPage() {
 
     if (result?.error) {
       setError(result.error)
+      setLoading(false)
       return
     }
 
@@ -32,21 +35,36 @@ export default function LoginPage() {
   return (
     <main className="page-shell">
       <section className="auth-card">
-        <h1>Login</h1>
+        <h1>Welcome back</h1>
+        <p className="auth-subtitle">Sign in to your account</p>
         <form onSubmit={handleSubmit} className="auth-form">
           <label>
-            Email
-            <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" required />
+            Email address
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              required
+              placeholder="Enter your email"
+            />
           </label>
           <label>
             Password
-            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" required />
+            <input
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              required
+              placeholder="Enter your password"
+            />
           </label>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit">Sign in</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Signing in...' : 'Sign in'}
+          </button>
         </form>
-        <p>
-          New here? <Link href="/register">Create an account</Link>
+        <p className="auth-footer">
+          Don't have an account? <Link href="/register">Create one here</Link>
         </p>
       </section>
     </main>
